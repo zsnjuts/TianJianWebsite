@@ -663,3 +663,23 @@ pre span{
 }
 
 
+#footer {
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+  background-color: #494a5f;
+}
+#footer .social-icon {
+  margin: 0 5px;
+}
+#footer .social-icon svg {
+  width: 18px;
+  height: 18px;
+}
+#footer a {
+  font-weight: 700;
+  color: #fff;
+}
+#footer:hover{
+    outline: none;
+}
