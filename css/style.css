@@ -643,6 +643,10 @@ pre span{
     background-color: #f5f5f5;
 }
 
+.swimlane p {
+    font-size: 1.3rem; line-height: 2rem;
+}
+
 #partners {
     text-align: center;
     margin: 0 auto;
