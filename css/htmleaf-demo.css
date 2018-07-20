@@ -80,6 +80,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 .htmleaf-header h1 {
 	color: #6c7a89;
 	font-size: 4em;
+	font-weight: 200;
 	line-height: 1;
 	margin-bottom: 0;
 	font-family: STXihei, STXingkai, "Microsoft YaHei", "宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
