@@ -17,6 +17,7 @@ nav.bootsnav .dropdown.megamenu-fw {
 
 nav.bootsnav .container {
     position: relative;
+    background-color: #f5f5f5;
 }
 
 nav.bootsnav .megamenu-fw .dropdown-menu {
