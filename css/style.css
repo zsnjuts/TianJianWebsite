@@ -572,7 +572,7 @@ pre span{
   /* vertically align its content */
   display: table;
   width: 100%;
-  background: url(../img/cd-hero-background.jpg) no-repeat center center;
+  background: url(../img/fruit-background.png) no-repeat center center;
   background-size: cover;
 }
 .cd-hero .cd-hero-content {
@@ -588,7 +588,7 @@ pre span{
 }
 @media only screen and (min-width: 1024px) {
   .cd-hero {
-    height: 650px;
+    height: 760px;
   }
   .computer-right {
     float: right;
