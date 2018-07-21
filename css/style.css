@@ -647,6 +647,15 @@ pre span{
     font-size: 1.3rem; line-height: 2rem;
 }
 
+.show h2 {
+    font-family: 'STXinwei';
+    font-size: 2.8rem;
+}
+
+.show div {
+    font-family: YouYuan;
+}
+
 #partners {
     text-align: center;
     margin: 0 auto;
@@ -667,7 +676,6 @@ pre span{
     width: 110px;
     height: 110px;
 }
-
 
 #footer {
   padding: 40px 0;

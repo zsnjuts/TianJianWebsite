@@ -80,13 +80,13 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 .htmleaf-header h1 {
 	color: #6c7a89;
 	font-size: 4em;
-	font-weight: 200;
+	font-weight: 300;
 	line-height: 1;
 	margin-bottom: 0;
-	font-family: STXihei, STXingkai, "Microsoft YaHei", "宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
+	font-family: STXihei; /*STXingkai*/
 }
 .htmleaf-header h1 span {
-	font-family: Bradley Hand ITC, Lucida Handwriting, Papyrus, "Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
+	font-family: Bradley Hand ITC; /*Lucida Handwriting, Papyrus*/
 	display: block;
 	font-size: 60%;
 	font-weight: 400;
@@ -214,7 +214,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 		padding: 2em 10% 2em;
 	}
 	.htmleaf-header h1 {
-        font-size:3.5rem;
+        font-size:2rem;
     }
     .htmleaf-links{font-size: 1.4em}
 }
@@ -224,7 +224,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 		padding: 2em 10% 2em;
 	}
 	.htmleaf-header h1 {
-        font-size:3rem;
+        font-size:2rem;
     }
     .htmleaf-links{font-size: 1.2em}
     .related h3{font-size: 1em;}
@@ -235,7 +235,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 
 @media screen and (max-width: 766px) {
 	.htmleaf-header h1 {
-        font-size:3em;
+        font-size:2em;
     }
     .htmleaf-links{font-size: 1.3em}
 }
