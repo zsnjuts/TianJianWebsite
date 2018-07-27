@@ -66,7 +66,6 @@ nav.navbar.bootsnav ul.nav li.active > a{
 }
 
 nav.navbar.bootsnav .navbar-toggle{
-    background-color: #fff !important;
     border: none;
     padding: 0;
     font-size: 18px;
@@ -83,6 +82,9 @@ nav.navbar.bootsnav ul.nav ul.dropdown-menu > li > a{
     white-space:normal;
 }
 
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: initial;
+}
 
 ul.menu-col{
     padding: 0;
