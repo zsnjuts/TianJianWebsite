@@ -665,17 +665,16 @@ pre span{
 #partners > div {
     width: 90%;
     margin: 0 auto;
-    padding: 5rem 10rem 5rem 10rem;
 }
 
 #partners > div > div {
-    padding: 1rem;
+    padding: 2rem;
     display: inline-block;
 }
 
 #partners .logo {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
 }
 
 #footer {
