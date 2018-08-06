@@ -1,0 +1,78 @@
+#homeIntro {
+  background-image: url("../img/活动部.png");
+}
+#ActIntro {
+  background-image: url("../img/部门简介.jpg");
+}
+#LongIntro {
+  background-image: url("../img/长期活动.png");
+}
+#ShortIntro {
+  background-image: url("../img/短期活动.png");
+}
+.parallax {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+}
+
+.parallax1 {
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+}
+
+.parallax-overlay {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.home-intro-content {
+  padding: 11em 0;
+  text-align: center;
+}
+.home-intro-content h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: white;
+}
+.home-intro-content p {
+  margin: 55px 0;
+  font-size: 18px;
+  line-height: 32px;
+}
+.home-intro-content .large-button:hover {
+  opacity: 0.5;
+}
+
+.menu{
+  opacity: 1;
+  font-size:2em
+  background-color: #2f3638;
+  color: #f43438;
+  height:18px
+}
+.menu-act1{
+  left:160px;
+  font-color:#DA0463
+}
+.menu-act2{
+   left:480px;
+   color:#DA0463
+}
+.menu-act3{
+  left:720px;
+  color:#DA0463
+
+}
+.inner_circle{
+border:1px solid #fff;
+border-radius:500px;
+width: 40px;
+height: 40px;
+}
