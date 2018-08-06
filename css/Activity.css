@@ -10,6 +10,12 @@
 #ShortIntro {
   background-image: url("../img/短期活动.png");
 }
+#MenuIntro {
+  background-color:white;
+  opacity: 1;
+    font-size:2em
+    height:100px
+}
 .parallax {
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -52,23 +58,21 @@
 
 .menu{
   opacity: 1;
-  font-size:2em
-  background-color: #2f3638;
-  color: #f43438;
-  height:18px
+  font-size:2em;
+  height:100px;
+  width:100%;
+  background-color:#f9f9f9;
 }
 .menu-act1{
-  left:160px;
-  font-color:#DA0463
+opacity: 1;
+  width:40%;
 }
 .menu-act2{
-   left:480px;
-   color:#DA0463
+opacity: 1;
+width:40%;
 }
 .menu-act3{
-  left:720px;
-  color:#DA0463
-
+opacity: 1;
 }
 .inner_circle{
 border:1px solid #fff;
