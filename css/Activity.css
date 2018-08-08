@@ -2,19 +2,15 @@
   background-image: url("../img/活动部.png");
 }
 #ActIntro {
-  background-image: url("../img/部门简介.jpg");
+  background-image: url("../img/部门简介.jpeg");
 }
 #LongIntro {
-  background-image: url("../img/长期活动.png");
+  background-image: url("../img/长期活动.jpg");
 }
 #ShortIntro {
-  background-image: url("../img/短期活动.png");
+  background-image: url("../img/短期活动.jpg");
 }
 #MenuIntro {
-  background-color:white;
-  opacity: 1;
-    font-size:2em
-    height:100px
 }
 .parallax {
   background-attachment: fixed;
@@ -57,14 +53,15 @@
 }
 
 .menu{
-  opacity: 1;
-  font-size:2em;
-  height:100px;
+  opacity: 0.6;
   width:100%;
-  background-color:#f9f9f9;
+  background-color:black;
+  top:0;
+  left:0
 }
 .menu-act1{
-opacity: 1;
+  opacity: 1;
+  left:10px;
   width:40%;
 }
 .menu-act2{
