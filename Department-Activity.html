@@ -189,20 +189,60 @@
         </div> <!-- /.container -->
     </div>
 </section>
-<section id="LongIntro" class="parallax1 first-widget">
-    <div class="parallax-overlay">
-        <div class="container home-intro-content">
+<section class="dark-content our-team" id="MenuIntro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header">
+                     <h3 class="section-title">长期活动</h3>
+                    <br>
+                     </div> <!-- /.section-header -->
+            </div> <!-- /.col-md-12 -->
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    <div class="team-members">
+        <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <p></p>
-                    <h2>来活动部一起"搞事"啦</h2>
-                    <small>服务社会，奉献爱心，推己及人，薪火相传</small>
-                    <p></p>
-                </div> <!-- /.col-md-12 -->
+                <div class="col-md-4 col-sm-4">
+                    <div class="team-member">
+                        <div class="thumb-post">
+                            <img src="img/我与动物有个约会.jpg" alt="">
+                        </div>
+                        <div class="member-content">
+                            <h4 class="member-name">我与动物有个约会</h4>
+                            <p style="color:black">Duis vitae consequat neque. Nulla pharetra eleifend nulla. </p>
+                        </div>
+                    </div> <!-- /.team-member -->
+                </div> <!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="team-member">
+                        <div class="thumb-post">
+                            <img src="img/青春伴夕阳.jpg" alt="">
+                        </div>
+                        <div class="member-content">
+                            <h4 class="member-name">青春伴夕阳</h4>
+                            <p style="color:black">Duis vitae consequat neque. Nulla pharetra eleifend nulla. </p>
+                        </div>
+                    </div> <!-- /.team-member -->
+                </div> <!-- /.col-md-4 -->
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="team-member">
+                        <div class="thumb-post">
+                            <img src="img/食堂微公益.jpg" alt="">
+                        </div>
+                        <div class="member-content">
+                            <h4 class="member-name">食堂微公益</h4>
+                            <p style="color:black">Duis vitae consequat neque. Nulla pharetra eleifend nulla. </p>
+                        </div>
+                    </div> <!-- /.team-member -->
+                </div> <!-- /.col-md-4 -->
             </div> <!-- /.row -->
         </div> <!-- /.container -->
-    </div>
-</section>
+    </div> <!-- /.team-members -->
+</section> <!-- /.our-team -->
+
 
 
 <section id="footer">
@@ -281,9 +321,9 @@
         $(window).scroll(function(){
         var scroH=$(this).scrollTop();
         if(scroH>=navH){
-        $(".menu").css({"position":"fixed","top":0,"left":0})
+        $(".menu").css({"position":"fixed","top":0,"left":0,"background-color":"white","opacity":"2"})
         }else{
-        $(".menu").css({"position":"static"})
+        $(".menu").css({"position":"static","background-color":"white","opacity":"1"})
         }
         })
     })

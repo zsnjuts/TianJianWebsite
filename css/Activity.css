@@ -11,6 +11,7 @@
   background-image: url("../img/短期活动.jpg");
 }
 #MenuIntro {
+  background-image: url("../img/背景.jpg");
 }
 .parallax {
   background-attachment: fixed;
@@ -53,27 +54,71 @@
 }
 
 .menu{
-  opacity: 0.6;
+  opacity: 1;
   width:100%;
-  background-color:black;
   top:0;
-  left:0
+  left:0;
+  background-color:white
 }
 .menu-act1{
-  opacity: 1;
   left:10px;
   width:40%;
+
 }
 .menu-act2{
-opacity: 1;
 width:40%;
 }
 .menu-act3{
-opacity: 1;
 }
 .inner_circle{
 border:1px solid #fff;
 border-radius:500px;
 width: 40px;
 height: 40px;
+}
+/*------------------------------------------------------
+	General Styling
+--------------------------------------------------------*/
+.dark-content {
+  background-color: #31373a;
+  width: 100%;
+  padding: 70px 0 80px 0;
+  text-align: center;
+  font-color:white
+}
+.dark-content .section-header .section-title {
+  color: black;
+}
+.dark-content .section-header .section-desc {
+  font-size: 30px;
+  font-weight: 600;
+  font-color:black
+}
+/*------------------------------------------------------
+	Our Team Styling
+--------------------------------------------------------*/
+.member-role {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.member-name {
+  font-size: 22px;
+  font-weight: 500;
+  color:black;
+  margin-top: 25px;
+  display: block;
+  text-align: center;
+}
+
+.thumb-post {
+  height: auto;
+}
+.thumb-post img {
+  width: 100%;
+  height: auto;
 }
