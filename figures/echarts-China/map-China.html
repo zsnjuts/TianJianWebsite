@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+	   <script>
+			window.jQuery || document.write('<script src="jquery-1.11.0.min.js"><\/script>')
+		</script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+myChart.showLoading();
+
+$.get('China.json', function (geoJson) {
+
+    myChart.hideLoading();
+
+    echarts.registerMap('HK', geoJson);
+
+    myChart.setOption(option = {
+        title: {
+            text: '天健社第十九届社员地理分布',
+			x: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: function(data){
+				if(!isNaN(data.value)){
+					return data.name + ": " + data.value + "人"
+				}
+			}
+			//formatter: '{b}: {c}人'
+        },
+        toolbox: {
+            show: true,
+            orient: 'vertical',
+            left: 'right',
+            top: 'center',
+            feature: {
+                dataView: {readOnly: false},
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        visualMap: {
+            min: 1,
+            max: 40,
+            text:['High','Low'],
+            realtime: false,
+            calculable: true,
+            inRange: {
+                color: ['lightskyblue','yellow', 'orangered']
+            }
+        },
+        series: [
+            {
+                name: '天健社第十九届社员地理分布',
+                type: 'map',
+                mapType: 'HK', // 自定义扩展图表类型
+                itemStyle:{
+                    normal:{label:{show:true}},
+                    emphasis:{label:{show:true}}
+                },
+                data:[
+					{name: '辽宁', value: 2},
+					{name: '湖南', value: 2},
+                    {name: '山西', value: 12},
+                    {name: '江苏', value: 40},
+                    {name: '海南', value: 1},
+                    {name: '安徽', value: 4},
+                    {name: '黑龙江', value: 3},
+                    {name: '内蒙古', value: 1},
+                    {name: '广东', value: 4},
+                    {name: '河南', value: 9},
+                    {name: '云南', value: 2},
+                    {name: '吉林', value: 1},
+                    {name: '贵州', value: 3},
+                    {name: '澳门', value: 1},
+                    {name: '江西', value: 1},
+                    {name: '北京', value: 1},
+                    {name: '广西', value: 3},
+                    {name: '河北', value: 1},
+                    {name: '新疆', value: 3},
+                    {name: '浙江', value: 1},
+					{name: '湖北', value: 2},
+					{name: '青海', value: 2},
+					{name: '台湾', value: 1},
+					{name: '甘肃', value: 1},
+                ]
+            }
+        ]
+    });
+});;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>
