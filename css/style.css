@@ -1,12 +1,10 @@
 /* ==============================================================
-
 Template name : Bootsnav - Multi Purpose Header
 Categorie : Bootstrap Menu in CSS
 Author : adamnurdin01
 Version : v1.0.0
 Created : 02 Juni  2016
 Last update : 02 Juni  2016
-
 ============================================================== */
 
 /*
@@ -557,7 +555,7 @@ pre span{
     .section.home .affiliates{
         padding-left: 15px;
     }
-    
+
     .section.home .affiliates img{
         display: block;
         position: relative;
@@ -605,7 +603,7 @@ pre span{
   height: 50px;
   width: 200px;
   position: relative;
-  margin-right: auto; margin-left: auto; 
+  margin-right: auto; margin-left: auto;
   margin-top: 80px;
   cursor: pointer;
   text-align: center;

@@ -18,6 +18,8 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/color.css" rel="stylesheet">
     <link href="css/Activity.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.1/particles.min.js"></script>
     <!--[if IE]>
     <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
@@ -28,12 +30,9 @@
 <nav class="navbar navbar-default bootsnav">
     <div class="container" style="margin: 0; width: 100%;">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                <i class="fa fa-bars"></i>
-            </button>
             <a class="navbar-brand" href="#brand">
                 <img src="img/logo.png" style="display:inline;" class="logo" alt="">
-                <span style="display: inline; vertical-align: middle; font-size: 2rem; font-family: STXinwei; font-weight: 300;">天健社</span>
+                <span style="vertical-align:middle; font-size: 2rem; font-family: STXinwei; font-weight: 300;">天健社</span>
             </a>
         </div>
         <!-- End Header Navigation -->
@@ -114,6 +113,7 @@
                 <div class="col-md-12">
                     <p></p>
                     <h2>来活动部一起"搞事"啦</h2>
+                    <br>
                     <small>服务社会，奉献爱心，推己及人，薪火相传</small>
                     <p></p>
                     </div> <!-- /.col-md-12 -->
@@ -175,20 +175,35 @@
 </nav>
 
 <!-- -->
-<section id="ActIntro" class="parallax1 first-widget">
-    <div class="parallax-overlay">
-        <div class="container home-intro-content">
-            <div class="row">
-                <div class="col-md-12">
-                    <p></p>
-                    <h2>来活动部一起"搞事"啦</h2>
-                    <small>服务社会，奉献爱心，推己及人，薪火相传</small>
-                    <p></p>
-                </div> <!-- /.col-md-12 -->
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div>
-</section>
+<div class="slide-container">
+    <div class="wrapper1">
+        <div class="clash-card barbarian">
+            </br>
+            <div class="clash-card__image clash-card__image--barbarian">
+                <img src="img/青春伴夕阳.JPG"/>
+            </div>
+            <div class="clash-card__level clash-card__level--barbarian">Level 4</div>
+            <div class="clash-card__unit-name">The Barbarian</div>
+            <div class="clash-card__unit-description">
+                The Barbarian is a kilt-clad Scottish warrior with an angry, battle-ready expression, hungry for destruction. He has Killer yellow horseshoe mustache.
+            </div>
+        </div> <!-- end clash-card barbarian-->
+    </div> <!-- end wrapper-->
+    <div class="wrapper1">
+        <div class="clash-card barbarian">
+            </br>
+            <div class="clash-card__image clash-card__image--barbarian">
+                <img src="img/食堂微公益.jpg"/>
+            </div>
+            <div class="clash-card__level clash-card__level--barbarian">Level 4</div>
+            <div class="clash-card__unit-name">The Barbarian</div>
+            <div class="clash-card__unit-description">
+                The Barbarian is a kilt-clad Scottish warrior with an angry, battle-ready expression, hungry for destruction. He has Killer yellow horseshoe mustache.
+            </div>
+        </div> <!-- end clash-card barbarian-->
+    </div> <!-- end wrapper-->
+</div>
+
 <section class="dark-content our-team" id="MenuIntro">
     <div class="container">
         <div class="row">
@@ -206,7 +221,7 @@
                 <div class="col-md-4 col-sm-4">
                     <div class="team-member">
                         <div class="thumb-post">
-                            <img src="img/我与动物有个约会.jpg" alt="">
+                            <img src="img/我与动物有个约会.jpg">
                         </div>
                         <div class="member-content">
                             <h4 class="member-name">我与动物有个约会</h4>
@@ -242,9 +257,6 @@
         </div> <!-- /.container -->
     </div> <!-- /.team-members -->
 </section> <!-- /.our-team -->
-
-
-
 <section id="footer">
     <p>
         <a class="social-icon" href="https://github.com/zsnjuts/TianJianWebsite" target="_blank">
@@ -315,6 +327,28 @@
 	</script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootsnav.js"></script>
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/slick.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	(function() {
+
+	  var slideContainer = $('.slide-container');
+      slideContainer.slick();
+	  $('.clash-card__image img').hide();
+	  $('.slick-active').find('.clash-card img').fadeIn(200);
+
+	  // On before slide change
+	  slideContainer.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+		$('.slick-active').find('.clash-card img').fadeOut(1000);
+	  });
+
+	  // On after slide change
+	  slideContainer.on('afterChange', function(event, slick, currentSlide) {
+		$('.slick-active').find('.clash-card img').fadeIn(200);
+	  });
+
+	})();
+</script>
 <script>
     $(function(){
         var navH=$(".menu").offset().top;
