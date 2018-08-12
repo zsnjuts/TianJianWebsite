@@ -40,8 +40,8 @@ font-size: 50px;
 	transition: transform 0.5s;
 }
 .img-prev, .img-next { cursor: pointer; }
-.img-prev {left:-30px}
-.img-next {right:-30px}
+.img-prev {left:-35px}
+.img-next {right:-35px}
 .img-overlay {
     color: #FFF;
 	position: absolute;
