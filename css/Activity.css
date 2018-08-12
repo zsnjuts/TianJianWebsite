@@ -10,8 +10,17 @@
 #ShortIntro {
   background-image: url("../img/短期活动.jpg");
 }
-#MenuIntro {
+#long {
   background-image: url("../img/背景.jpg");
+  background-size: cover;
+}
+#Act {
+  background-image: url("../img/背景3.png");
+  background-size: cover;
+}
+#short{
+  background-image: url("../img/背景2.png");
+  background-size: cover;
 }
 .parallax {
   background-attachment: fixed;
@@ -33,6 +42,8 @@
 
 .parallax-overlay {
   background-color: rgba(0, 0, 0, 0.65);
+  color:white;
+  top:10px
 }
 
 .home-intro-content {
@@ -122,3 +133,6 @@ height: 40px;
   width: 100%;
   height: auto;
 }
+/*------------------------------------------------------
+部门简介部分
+--------------------------------------------------------*/
