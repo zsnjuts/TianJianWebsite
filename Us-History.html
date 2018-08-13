@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>天健社历史</title>
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-timeline.css">
+	<link rel="shortcut icon" href="img/logo.ico"/>
+    <link rel="bookmark" href="img/logo.ico"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="fonts/FontAwesome/font-awesome.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/bootsnav.css" rel="stylesheet">
+    <link href="css/htmleaf-demo.css" rel="stylesheet" type="text/css">
+    <link href="css/overwrite.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/color.css" rel="stylesheet">
+    <link href="css/Activity.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.1/particles.min.js"></script>
+	<style type="text/css">
+		.main-timeline{
+		    overflow: hidden;
+		    position: relative;
+		}
+		.main-timeline .timeline{
+		    position: relative;
+		    margin-top: -79px;
+		}
+		.main-timeline .timeline:first-child{ margin-top: 0; }
+		.main-timeline .timeline:before,
+		.main-timeline .timeline:after{
+		    content: "";
+		    display: block;
+		    width: 100%;
+		    clear: both;
+		}
+		.main-timeline .timeline:before{
+		    content: "";
+		    width: 100%;
+		    height: 100%;
+		    box-shadow: -8px 0 5px -5px rgba(0, 0, 0, 0.5) inset;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    z-index: 2;
+		}
+		.main-timeline .timeline-icon{
+		    width: 200px;
+		    height: 200px;
+		    border-radius: 50%;
+		    border: 25px solid transparent;
+		    border-top-color: #f44556;
+		    border-right-color: #f44556;
+		    margin: auto;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    bottom: 0;
+		    right: 0;
+		    z-index: 1;
+		    transform: rotate(45deg);
+		}
+		.main-timeline .year{
+		    display: block;
+		    width: 110px;
+		    height: 110px;
+		    line-height: 110px;
+		    border-radius: 50%;
+		    background: #fff;
+		    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+		    margin: auto;
+		    font-size: 30px;
+		    font-weight: bold;
+		    color: #f44556;
+		    text-align: center;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    bottom: 0;
+		    right: 0;
+		    transform: rotate(-45deg);
+		}
+		.main-timeline .timeline-content{
+		    width: 35%;
+		    float: right;
+		    background: #f44556;
+		    padding: 30px 20px;
+		    margin: 50px 0;
+		    z-index: 1;
+		    position: relative;
+		}
+		.main-timeline .timeline-content:before{
+		    content: "";
+		    width: 20%;
+		    height: 15px;
+		    background: #f44556;
+		    position: absolute;
+		    top: 50%;
+		    left: -20%;
+		    z-index: -1;
+		    transform: translateY(-50%);
+		}
+		.main-timeline .title{
+		    font-size: 20px;
+		    font-weight: bold;
+		    color: #fff;
+		    margin: 0 0 10px 0;
+		}
+		.main-timeline .description{
+		    font-size: 16px;
+		    color: #fff;
+		    line-height: 24px;
+		    margin: 0;
+		}
+		.main-timeline .timeline:nth-child(2n):before{ box-shadow: 8px 0 5px -5px rgba(0, 0, 0, 0.5) inset; }
+		.main-timeline .timeline:nth-child(2n) .timeline-icon{ transform: rotate(-135deg); }
+		.main-timeline .timeline:nth-child(2n) .year{ transform: rotate(135deg); }
+		.main-timeline .timeline:nth-child(2n) .timeline-content{ float: left; }
+		.main-timeline .timeline:nth-child(2n) .timeline-content:before{
+		    left: auto;
+		    right: -20%;
+		}
+		.main-timeline .timeline:nth-child(2n) .timeline-icon{
+		    border-top-color: #e97e2e;
+		    border-right-color: #e97e2e;
+		}
+		.main-timeline .timeline:nth-child(2n) .year{ color: #e97e2e; }
+		.main-timeline .timeline:nth-child(2n) .timeline-content,
+		.main-timeline .timeline:nth-child(2n) .timeline-content:before{ background: #e97e2e; }
+		.main-timeline .timeline:nth-child(3n) .timeline-icon{
+		    border-top-color: #13afae;
+		    border-right-color: #13afae;
+		}
+		.main-timeline .timeline:nth-child(3n) .year{ color: #13afae; }
+		.main-timeline .timeline:nth-child(3n) .timeline-content,
+		.main-timeline .timeline:nth-child(3n) .timeline-content:before{ background: #13afae; }
+		.main-timeline .timeline:nth-child(4n) .timeline-icon{
+		    border-top-color: #105572;
+		    border-right-color: #105572;
+		}
+		.main-timeline .timeline:nth-child(4n) .year{ color: #105572; }
+		.main-timeline .timeline:nth-child(4n) .timeline-content,
+		.main-timeline .timeline:nth-child(4n) .timeline-content:before{ background: #105572; }
+		@media only screen and (max-width: 1199px){
+		    .main-timeline .timeline{ margin-top: -103px; }
+		    .main-timeline .timeline-content:before{ left: -18%; }
+		    .main-timeline .timeline:nth-child(2n) .timeline-content:before{ right: -18%; }
+		}
+		@media only screen and (max-width: 990px){
+		    .main-timeline .timeline{ margin-top: -127px; }
+		    .main-timeline .timeline-content:before{ left: -2%; }
+		    .main-timeline .timeline:nth-child(2n) .timeline-content:before{ right: -2%; }
+		}
+		@media only screen and (max-width: 767px){
+		    .main-timeline .timeline{
+		        margin-top: 0;
+		        overflow: hidden;
+		    }
+		    .main-timeline .timeline:before,
+		    .main-timeline .timeline:nth-child(2n):before{
+		        box-shadow: none;
+		    }
+		    .main-timeline .timeline-icon,
+		    .main-timeline .timeline:nth-child(2n) .timeline-icon{
+		        margin-top: -30px;
+		        margin-bottom: 20px;
+		        position: relative;
+		        transform: rotate(135deg);
+		    }
+		    .main-timeline .year,
+		    .main-timeline .timeline:nth-child(2n) .year{ transform: rotate(-135deg); }
+		    .main-timeline .timeline-content,
+		    .main-timeline .timeline:nth-child(2n) .timeline-content{
+		        width: 100%;
+		        float: none;
+		        border-radius: 0 0 20px 20px;
+		        text-align: center;
+		        padding: 25px 20px;
+		        margin: 0 auto;
+		    }
+		    .main-timeline .timeline-content:before,
+		    .main-timeline .timeline:nth-child(2n) .timeline-content:before{
+		        width: 15px;
+		        height: 25px;
+		        position: absolute;
+		        top: -22px;
+		        left: 50%;
+		        z-index: -1;
+		        transform: translate(-50%,0);
+		    }
+		}
+	</style>
+</head>
+
+<body style="background: white">
+<nav class="navbar navbar-default bootsnav">
+	<div class="container" style="margin: 0; width: 100%;">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+				<i class="fa fa-bars"></i>
+			</button>
+			<a class="navbar-brand" href="#brand">
+				<img src="img/logo.png" style="display:inline;" class="logo" alt="">
+				<span style="display: inline; vertical-align: middle; font-size: 2rem; font-family: STXinwei; font-weight: 300;">天健社</span>
+			</a>
+		</div>
+		<!-- End Header Navigation -->
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="computer-right">
+			<div class="collapse navbar-collapse" id="navbar-menu">
+				<ul class="nav navbar-nav navbar-left" style="font-size: 1.2rem; font-family: Microsoft YaHei" data-in="fadeInDown" data-out="fadeOutUp">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">部门</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="#">人资部</a>
+							</li>
+							<li>
+								<a href="#">项目部</a>
+							</li>
+							<li>
+								<a href="Department-Activity.html">活动部</a>
+							</li>
+							<li>
+								<a href="#">全媒体中心</a>
+							</li>
+							<li>
+								<a href="#">公关部</a>
+							</li>
+							<li>
+								<a href="#">唐氏之家</a>
+							</li>
+							<li>
+								<a href="#">技术部</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">公益</span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="https://mp.weixin.qq.com/s/7dmnOLClNmRf9j6aA1RehQ">民艺进校园</a>
+							</li>
+							<li>
+								<a href="https://mp.weixin.qq.com/s/N8tcIcM7MafYGJ3wp8IN3A">市博讲解员</a>
+							</li>
+							<li>
+								<a href="https://mp.weixin.qq.com/s/2OFcHkRQOXSCw-ODTQGshg">探访老教授</a>
+							</li>
+							<li>
+								<a href="https://mp.weixin.qq.com/s/cY2jMdk1RaRLRt5jaQJ9tw">青春伴夕阳</a>
+							</li>
+							<li>
+								<a href="https://mp.weixin.qq.com/s/E4f-iH-2bnMBCXO2bd-ADw">食堂微公益</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="News.html">动态</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">我们</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="Us-Introduction.html">简介</a>
+							</li>
+							<li>
+								<a href="Us-History.html">历史</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+	</div>
+	<!-- .cd-primary-nav -->
+</nav>
+
+
+	<!-- .cd-auto-hide-header -->
+	<header class="htmleaf-header">
+		<h1>天健社历史</h1>
+	</header>
+	<div class="htmleaf-container">
+		<div class="demo">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-md-12">
+		                    <div class="main-timeline">
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2016</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">两岸四地高校公益论坛</h3>
+		                                <p class="description">
+		                                    天健社赴北京航空航天大学参加两岸四地公益论坛，与来自内地与港澳台30个公益社团进行交流。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2016</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">南京大学“助学·筑梦·铸人”二等奖</h3>
+		                                <p class="description">
+		                                    天健社参与南京大学“助学·筑梦·铸人”视频大赛并获得二等奖。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2016</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">南京大学崇孝项目团体奖</h3>
+		                                <p class="description">
+		                                    天健社暑期社会实践崇孝立项“艺师艺友”获得南京大学2016优秀崇孝奖。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2016</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">年度志愿服务先进集体</h3>
+		                                <p class="description">
+		                                    在2015-2016年度南京大学十佳志愿群体评选中，天健社被评为年度志愿服务先进集体。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2016</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">十佳公益项目</h3>
+		                                <p class="description">
+		                                    “南京市博物馆志愿讲解项目”入选十佳志愿服务项目。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2015</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">优秀志愿服务团队</h3>
+		                                <p class="description">
+		                                    天健社被评为2015年度南京市博物馆“优秀志愿服务团队”。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2015</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">十佳公益项目</h3>
+		                                <p class="description">
+		                                    “民间艺术进校园”被评为南京大学2015年度十佳公益项目。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2015</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">学术科技作品展特等奖</h3>
+		                                <p class="description">
+		                                    天健社的暑期社会实践项目“老友记”参与第二届“工行杯”学术科技作品展并获得特等奖。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2015</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">暑期社会实践“老友记”</h3>
+		                                <p class="description">
+		                                    “老友记”团队被评为校级十佳团队，该项目被评为“崇孝”优秀项目、优秀孵化项目。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2014</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">十佳公益项目</h3>
+		                                <p class="description">
+		                                    “探访老教授”被评为南京大学2014年度十佳公益项目。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2014</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">十佳社团</h3>
+		                                <p class="description">
+		                                    天健社在社联评选中被评为2014-2015年度南京大学十佳社团。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2014</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">开创志愿活动</h3>
+		                                <p class="description">
+		                                    走访老教授活动、爱心伞活动、民艺进校园等活动相继展开，广受校内外的好评
+		                                </p>
+		                            </div>
+		                        </div>
+							
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2013</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">博物馆志愿活动</h3>
+		                                <p class="description">
+		                                    与南京市博物馆、南京地质博物馆展开合作，招募志愿讲解员，并开展了博物馆进校园活动。
+		                                </p>
+		                            </div>
+		                        </div>
+							
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2012</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">公益论坛&交流会</h3>
+		                                <p class="description">
+		                                    3月前往浙江大学参加长三角公益论坛，10月前往四川大学参加第七次唐仲英德育奖学金交流大会。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2011</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">共办爱心晚会</h3>
+		                                <p class="description">
+		                                    天健、思源、新鸿基、弘毅、自强校内五大公益社团共同举办爱心晚会。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+								<div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2010</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">优秀志愿者团队</h3>
+		                                <p class="description">
+		                                    天健社的地铁志愿服务活动表现出色，被南京市地铁运营集团授予“优秀志愿者团队”荣誉。
+		                                </p>
+		                            </div>
+		                        </div>
+								
+		                        <div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2009</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">长三角公益交流论坛</h3>
+		                                <p class="description">
+		                                    参加长三角公益交流论坛，并成为常任理事社团之一。
+		                                </p>
+		                            </div>
+		                        </div>
+
+		                        <div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2008</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">灾区募捐</h3>
+		                                <p class="description">
+		                                    汶川地震后，第一时间组织开展为地震灾区人民的募捐活动，编写并免费发放防震知识手册。
+		                                </p>
+		                            </div>
+		                        </div>
+
+		                        <div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2005</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">对外招新</h3>
+		                                <p class="description">
+		                                    天健社开始面向全校招新，每年都有一批富有热情和爱心的同学加入天健社。
+		                                </p>
+		                            </div>
+		                        </div>
+
+		                        <div class="timeline">
+		                            <div class="timeline-icon"><span class="year">2000</span></div>
+		                            <div class="timeline-content">
+		                                <h3 class="title">天健社成立</h3>
+		                                <p class="description">
+		                                    天健社直属于南京大学学工处，同年南大天健社社版正式在南大bbs（小百合）上开版。
+		                                </p>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+	</div>
+
+
+	<section id="footer">
+		<p>
+			<a class="social-icon" href="https://github.com/zsnjuts/TianJianWebsite" target="_blank">
+				<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<title id="simpleicons-github-icon" lang="en">GitHub icon</title>
+					<path fill="#FFFFFF" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+				</svg>
+
+			</a>
+			<a class="social-icon" href="https://mp.weixin.qq.com/mp/homepage?__biz=MzAxNjE1OTgwMQ==&hid=5&sn=bb1fa9acc517d8904d9d5a914d19ab4e&scene=18#wechat_redirect"
+				target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 252 252" style="fill:#000000;">
+					<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+						stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"
+						style="mix-blend-mode: normal">
+						<path d="M0,252v-252h252v252z" fill="#494a5f"></path>
+						<g>
+							<g id="surface1">
+								<path d="M94.5,31.5c-46.2041,0 -84,31.5 -84,70.875c0,22.5791 12.0791,42 31.5,55.125l-10.5,31.5l33.0791,-20.46679c8.9209,3.13769 19.4209,4.71679 29.9209,4.71679c46.2041,0 84,-31.5 84,-70.875c0,-39.375 -37.7959,-70.875 -84,-70.875z"
+									fill="#ffffff"></path>
+								<path d="M105,152.25c0,-32.0332 30.4541,-57.75 68.25,-57.75c1.5791,0 3.15821,0 4.7168,0c-0.5127,-3.6709 -1.55859,-7.34179 -2.625,-10.5c-0.5127,0 -1.55859,0 -2.0918,0c-43.5791,0 -78.75,30.4541 -78.75,68.25c0,7.3418 1.5791,14.1709 3.6709,21c3.6709,0 7.36231,-0.5332 11.0332,-1.0459c-2.625,-6.29589 -4.2041,-13.125 -4.2041,-19.9541z"
+									fill="#494a5f"></path>
+								<path d="M241.5,152.25c0,-32.0332 -30.4541,-57.75 -68.25,-57.75c-37.7959,0 -68.25,25.7168 -68.25,57.75c0,32.03321 30.4541,57.75 68.25,57.75c9.4541,0 18.375,-1.5791 26.25,-4.2041l26.25,14.7041l-7.34179,-25.2041c14.17089,-10.5 23.09179,-25.7168 23.09179,-43.0459z"
+									fill="#ffffff"></path>
+								<path d="M73.5,78.75c0,5.78321 -4.71679,10.5 -10.5,10.5c-5.7832,0 -10.5,-4.71679 -10.5,-10.5c0,-5.7832 4.7168,-10.5 10.5,-10.5c5.78321,0 10.5,4.7168 10.5,10.5zM126,68.25c-5.7832,0 -10.5,4.7168 -10.5,10.5c0,5.78321 4.7168,10.5 10.5,10.5c5.78321,0 10.5,-4.71679 10.5,-10.5c0,-5.7832 -4.71679,-10.5 -10.5,-10.5z"
+									fill="#000000"></path>
+								<path d="M157.5,139.125c0,4.2041 -3.6709,7.875 -7.875,7.875c-4.2041,0 -7.875,-3.6709 -7.875,-7.875c0,-4.2041 3.6709,-7.875 7.875,-7.875c4.2041,0 7.875,3.6709 7.875,7.875zM196.875,131.25c-4.2041,0 -7.875,3.6709 -7.875,7.875c0,4.2041 3.6709,7.875 7.875,7.875c4.2041,0 7.875,-3.6709 7.875,-7.875c0,-4.2041 -3.6709,-7.875 -7.875,-7.875z"
+									fill="#000000"></path>
+							</g>
+						</g>
+					</g>
+				</svg>
+			</a>
+			<a class="social-icon" href="https://baike.baidu.com/item/南京大学天健社" target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 252 252" style="fill:#000000;">
+					<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+						stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"
+						style="mix-blend-mode: normal">
+						<path d="M0,252v-252h252v252z" fill="none"></path>
+						<g id="Layer_1">
+							<path d="M189.4935,164.5875c-8.89875,-7.875 -19.7085,-16.93125 -34.965,-38.5875c-9.79125,-13.89675 -18.438,-21 -31.1535,-21c-13.986,0 -21.61425,6.5625 -29.148,17.21475c-11.025,15.59775 -15.35625,20.84775 -26.712,29.79375c-4.1265,3.24975 -25.52025,16.653 -25.515,40.27275c0.00525,27.5625 19.70325,38.71875 37.56375,38.71875c23.46225,0 28.55475,-5.25 43.81125,-5.25c19.07325,0 29.2425,5.25 44.499,5.25c30.51825,0 36.876,-22.96875 36.876,-37.422c0,-13.7655 -6.35775,-21.1155 -15.2565,-28.9905z"
+								fill="#ffffff"></path>
+							<path d="M59.79225,130.64625c16.401,-3.6435 18.984,-19.62975 18.95775,-30.093c-0.0105,-3.654 -0.336,-6.63075 -0.504,-8.1795c-1.0395,-8.8095 -10.64175,-23.8875 -23.89275,-24.1185c-0.63,-0.0105 -1.2705,0.0105 -1.91625,0.06825c-17.913,1.6485 -20.53275,28.413 -20.53275,28.413c-0.294,1.50675 -0.4305,3.21825 -0.4095,5.05575c0.16275,11.88075 7.119,29.01675 22.4385,29.4525c1.8375,0.04725 3.78525,-0.1365 5.859,-0.5985"
+								fill="#ffffff"></path>
+							<path d="M102.39075,84c13.05675,0 23.60925,-14.09625 23.60925,-31.5105c0,-17.41425 -10.5525,-31.4895 -23.60925,-31.4895c-13.062,0 -23.64075,14.07525 -23.64075,31.4895c0,17.41425 10.57875,31.5105 23.64075,31.5105"
+								fill="#ffffff"></path>
+							<path d="M154.9905,89.061c1.16025,0.16275 2.289,0.21525 3.38625,0.17325c14.154,-0.54075 23.184,-17.199 25.10025,-30.04575c0.19425,-1.26525 0.2835,-2.5515 0.273,-3.84825c-0.07875,-12.81525 -9.61275,-26.313 -19.94475,-28.8225c-11.42925,-2.793 -25.68825,16.65825 -26.9745,29.3475c-0.19425,1.9425 -0.30975,3.87975 -0.33075,5.79075c-0.13125,13.398 4.41525,25.48875 18.4905,27.405"
+								fill="#ffffff"></path>
+							<path d="M220.416,110.9955c0,-6.72525 -5.271,-26.9955 -24.8955,-26.9955c-19.6665,0 -22.2705,19.131 -22.2705,32.64975c0,12.6525 0.98175,30.198 24.0345,30.35025c0.45675,0.00525 0.924,0 1.40175,-0.0105c21.14175,-0.4935 21.96075,-22.06575 21.798,-32.2245c-0.021,-1.56975 -0.06825,-2.86125 -0.06825,-3.7695"
+								fill="#ffffff"></path>
+							<path d="M126,162.75v39.375c0,0 0,9.84375 13.78125,13.125h33.46875v-52.5h-13.78125v39.375h-14.4375c0,0 -4.59375,-0.65625 -5.25,-3.9375v-35.4375z"
+								fill="#000000"></path>
+							<path d="M105,141.75v21h-15.75c-11.15625,1.96875 -21,11.8125 -20.99475,25.59375c0,0.2205 -0.00525,0.43575 -0.00525,0.65625c0,14.4375 9.84375,24.28125 21,26.25h29.53125v-73.5zM105,203.4375h-12.46875c-3.9375,0 -10.5,-5.90625 -10.5,-14.4375c0,-8.53125 6.5625,-14.4375 10.5,-14.4375h12.46875z"
+								fill="#000000"></path>
+						</g>
+					</g>
+				</svg>
+			</a>
+		</p>
+		<p>遵循
+			<a href="https://opensource.org/licenses/MIT" target="_blank">MIT 开源协议</a>
+			<br> Ⓒ 2018 南大天健社技术部 团队出品
+		</p>
+	</section>
+
+	<script>
+		window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')
+	</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootsnav.js"></script>
+</body>
+</html>
