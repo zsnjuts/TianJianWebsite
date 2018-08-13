@@ -85,7 +85,9 @@ export default class Content extends React.Component {
                     ref={(node) => { this.resumeNode = node }}
                 >
                 </div>
-                
+                <div id="bot" style={{ padding: '10px', textAlign: 'center', marginTop: '100px', fontSize: '20px', color: 'rgba(150, 150, 150, 0.8)' }}>
+                    <a href="index.html" style="color: blue">返回首页</a>
+                </div>
             </div>
         )
     }

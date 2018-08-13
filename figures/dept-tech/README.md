@@ -1,9 +1,10 @@
 # 技术部部门介绍
 
+> 要能够运行，首先需要执行命令`npm install`
+
 本地测试
 -------
 ```
-npm install
 npm run dev
 ```
 
@@ -14,8 +15,10 @@ http://localhost:8080/
 
 部署
 -------
+
+执行运行`build.sh`，或者
+
 ```
-npm install
 npm run build
 ```
 

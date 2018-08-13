@@ -32,7 +32,7 @@ html {
 .workArea{
   color: rgb(222,222,222); 
   overflow: auto;
-  background: rgb(48, 48, 48);
+  background: rgb(25, 25, 25);
   border: 1px solid #ccc;
   max-height: 44.6%;
   width: 35%;
@@ -89,7 +89,7 @@ html {
   border: 1px solid;
   overflow: auto;
   color: rgb(222,222,222); 
-  background: rgb(48, 48, 48);
+  background: rgb(25, 25, 25);
 }
 
 /*
