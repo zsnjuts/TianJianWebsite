@@ -32,7 +32,7 @@
   background-image: url("../img/全媒体.jpg");
 }
 #PublicRelationsIntro {
-  background-image: url("../img/活动部.png");
+  background-image: url("../img/公关部.jpg");
 }
 .parallax {
   background-attachment: fixed;
@@ -149,6 +149,15 @@ height: 40px;
 }
 .thumb-post1 img {
   height: 300px;
+}
+.thumb-post2 {
+  width:100%
+}
+.thumb-post2 post {
+  left:33%
+}
+.thumb-post2 img {
+  height: 250px;
 }
 /*------------------------------------------------------
 部门简介部分
