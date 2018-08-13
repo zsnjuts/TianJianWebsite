@@ -22,6 +22,18 @@
   background-image: url("../img/背景2.png");
   background-size: cover;
 }
+#ProjectIntro {
+  background-image: url("../img/error_page_bg.jpg");
+}
+#HRIntro {
+  background-image: url("../img/人资部.jpg");
+}
+#MediaIntro {
+  background-image: url("../img/全媒体.jpg");
+}
+#PublicRelationsIntro {
+  background-image: url("../img/活动部.png");
+}
 .parallax {
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -131,6 +143,12 @@ height: 40px;
 }
 .thumb-post img {
   height: 180px;
+}
+.thumb-post1 {
+  height: auto;
+}
+.thumb-post1 img {
+  height: 300px;
 }
 /*------------------------------------------------------
 部门简介部分
