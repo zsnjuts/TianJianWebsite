@@ -1,2 +1,5 @@
 .idea/
 .vscode/
+figures/dept-tech/node_modules/
+figures/dept-tech/npm-debug.log
+figures/dept-tech/build/bundle.js
