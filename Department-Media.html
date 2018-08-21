@@ -62,6 +62,7 @@
 		    font-style: italic;
 		    line-height: 19px;
 		    margin-bottom: 0;
+            text-align: center;
 		    vertical-align:middle
 		}
 		.owl-theme .owl-controls{
@@ -93,6 +94,16 @@
 		        margin: 0;
 		    }
 		}
+        .adapt-center {
+            width: 35%;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 480px){
+            .adapt-center {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
 		.mt50{padding-top: 50px;}
 	</style>
     <!--[if IE]>
@@ -247,7 +258,7 @@
                                 <h3 class="testimonial-title" style="vertical-align:middle;">
                                     部门简介
                                 </h3>
-                                <p style=" padding:40px 250px 0 250px;">
+                                <p class="adapt-center">
                                     全媒体中心的主要职责就是宣传和文案工作，天健社几乎所有部门的宣传工作都要交由全媒体中心负责。
                                 </p>
                             </div>
@@ -258,9 +269,11 @@
                                 <h3 class="testimonial-title">
                                     部门工作
                                 </h3>
-                                <li  style=" padding: 30px 0 0 350px;">微信等平台的宣传</li>
-                                <li style=" padding: 0 0 0 350px;">海报传单等作品的制作</li>
-                                <li style=" padding: 0 0 0 350px;">网盘等平台的管理</li>
+                                <ul class="adapt-center">
+                                    <li>微信等平台的宣传</li>
+                                    <li>海报传单等作品的制作</li>
+                                    <li>网盘等平台的管理</li>
+                                </ul>
                             </div>
                         </div>
 
@@ -270,7 +283,7 @@
                                 <h3 class="testimonial-title">
                                     能力锻炼
                                 </h3>
-                                <p style=" padding:40px 0 0 200px;">
+                                <p class="adapt-center">
                                 从微信推送到海报制作，全媒体是一个可以get很多实用技能，真正可以让你做到全面发展的部门
                                 </p>
                             </div>
