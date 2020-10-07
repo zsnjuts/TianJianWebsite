@@ -1,7 +1,7 @@
 import React from 'luy'
 const style = require("raw-loader!./style1.txt") //注意使用raw-loader解析字符串
 const style2 = require("raw-loader!./style2.txt")
-const resume = require("raw-loader!./resume.txt")
+const introduction = require("raw-loader!./introduction.txt")
 import showdown from 'showdown' //第三方的一个开源markdown库
 import Prism from 'prismjs'//第三方的一个开源的代码染色库，非常好用
 let interval
@@ -19,7 +19,7 @@ const wirteChars = (that, nodeName, char) => new Promise((resolve) => {
             })
             
             that.contentNode.scrollTop = that.contentNode.scrollHeight
-        } else if (nodeName == 'resume') {
+        } else if (nodeName == 'introduction') {
             const originResume = that.state.resumeText + char
             const converter = new showdown.Converter()
             const markdownResume = converter.makeHtml(originResume)
@@ -29,11 +29,11 @@ const wirteChars = (that, nodeName, char) => new Promise((resolve) => {
             })
             that.resumeNode.scrollTop = that.resumeNode.scrollHeight
         }
-        /* 这里是控制，当遇到中文符号的？，！的时候就延长时间  */
-        if (char == "？" || char == "，" || char == '！') {
+        /* 这里是控制，当遇到中文符号的？，！。的时候就延长时间  */
+        if (char == "？" || char == "，" || char == '！' || char == '。') {
             interval = 800
         } else {
-            interval = 22
+            interval = 10
         }
         resolve()//一定要写的promise函数，不然你无法获得promise结果
     }, interval)
@@ -65,7 +65,7 @@ export default class Content extends React.Component {
     componentDidMount() {
         (async (that) => {//这里的这个函数中文名叫做「定义即运行函数」，其实就是定义了马上运行。
             await writeTo(that, 'workArea', 0, style)
-            await writeTo(that, 'resume', 0, resume)
+            await writeTo(that, 'introduction', 0, introduction)
             await writeTo(that, 'workArea', 0, style2)
         })(this)
     }
@@ -80,12 +80,14 @@ export default class Content extends React.Component {
                     <style dangerouslySetInnerHTML={{ __html: this.state.DOMStyleText }}></style>
                 </div>
                 <div
-                    className='resume'
+                    className='introduction'
                     dangerouslySetInnerHTML={{ __html: this.state.DOMResumeText }}
                     ref={(node) => { this.resumeNode = node }}
                 >
                 </div>
-                
+                <div id="bot" style={{ padding: '10px', textAlign: 'center', marginTop: '100px', fontSize: '20px', color: 'rgba(150, 150, 150, 0.8)' }}>
+                    <a href="index.html">返回首页</a>
+                </div>
             </div>
         )
     }
